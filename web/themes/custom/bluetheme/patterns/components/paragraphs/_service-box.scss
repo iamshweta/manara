@@ -1,0 +1,95 @@
+.paragraph--type--service-box-card {
+  // padding: 32px 15px 10px 15px;
+  text-align: center;
+  background: $white;
+  position: relative;
+  border-radius: 6px;
+  margin: 15px;
+  flex-basis: 29%;
+  // max-width: 40%;
+  @media (max-width: $mediaXS) {
+    max-width: none;
+    margin: 40px 0;
+  }
+  @media (min-width: 768px) and (max-width: 911px) {
+    margin: 70px 0;
+  }
+
+  .service-description {
+    padding: 20px;
+    margin: 20px;
+    @media (max-width: $mediaXS) {
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+  .service-sub-title p {
+    font-size: 20px;
+  }
+
+  .service-title {
+    font-size: 25px;
+    margin-top: 50px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    line-height: 1.25;
+    margin: 18px 0;
+    padding: 20px 0;
+    color: #090906;
+    &:hover {
+      color: #e8bb07;
+    }
+    @media (max-width: $mediaXS) {
+      padding: 25px;
+      font-size: 20px;
+    }
+  }
+  .ctalink {
+    position: absolute;
+    left: 41%;
+    width: 45px;
+    background: #0c2237;
+    height: 45px;
+    border-radius: 50%;
+    bottom: 0%;
+    top: 95%;
+    color: $white;
+    @media (min-width: 768px) and (max-width: 911px) {
+      left: 45%;
+    }
+
+    &:hover {
+      background: $primary;
+    }
+
+    a {
+      position: relative;
+      color: gray;
+      font-size: 0;
+      &:hover {
+        color: $white;
+      }
+      &::before {
+        content: "\2192";
+        font-size: 25px;
+        position: absolute;
+        top: -15px;
+        color: $white;
+        left: -12px;
+      }
+    }
+  }
+
+  img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+

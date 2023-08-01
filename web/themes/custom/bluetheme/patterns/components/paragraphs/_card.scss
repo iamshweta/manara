@@ -1,0 +1,59 @@
+.paragraph--type--card{
+  background-color: $off-white;
+  padding-bottom: 120px;
+
+  .service-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: $mediaM){
+      flex-direction: column;
+    }
+    @media (max-width: $mediaXS){
+      display: block;
+    }
+
+    .service-box {
+      margin: 0 10px;
+      border-radius: 10px;
+      background-color: $white;
+      transition: all 0.3s ease-out 0s;
+      border: 3px solid $white;
+      
+
+      @media (max-width: $mediaXS){
+        margin-bottom: 30px;
+      }
+      &:hover {
+        border: 3px solid $primary;
+        transition: all 0.3s ease-out 0s;
+        .service-title{
+          color: #e8bb07;
+          @media (min-width: 768px) and (max-width: 911px){
+            padding: 20px 0;
+
+          }
+
+        }
+        .ctalink{
+          background: $primary;
+          a{
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .header-title{
+    font-size: 50px;
+    font-weight: 700;
+    color: $secondary;
+    padding: 70px;
+    @media (max-width: $mediaXS){
+    font-size: 43px;
+    color: $secondary;
+    padding: 30px !important;
+    }
+  }
+}
+

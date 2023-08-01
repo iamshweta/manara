@@ -1,0 +1,154 @@
+.paragraph--type--two-column-paragraph {
+  background: url("../../images/consultation-bg.jpg");
+  padding-top: 130px;
+  padding-bottom: 85px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  .container {
+    @media (max-width: $mediaXS) {
+      flex-direction: column;
+    }
+    @media (max-width: $mediaM) {
+      flex-direction: column;
+    }
+
+  }
+  .items {
+    margin: 0 20px;
+    @media (max-width: $mediaXS) {
+      margin: 0;
+    }
+    .paragraph--type--contact-form {
+      padding-top: 70px;
+      padding-right: 55px;
+      padding-bottom: 70px;
+      padding-left: 55px;
+      background-color: $white;
+      border-radius: 12px;
+
+      .webform-submission-form {
+        -webkit-appearance: none;
+
+        @media (max-width: $mediaXS) {
+          -webkit-appearance: none;
+        }
+        label {
+          margin-bottom: 30px;
+          color: grey;
+          font-weight: 600;
+          font-size: 16px;
+          text-transform: capitalize;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        .form-select {
+          margin-bottom: 20px;
+          padding: 0 35px;
+          background: #f9f9f9;
+          border-width: 2px 2px 2px 2px;
+          border-style: solid;
+          border-color: rgba(255, 255, 255, 0);
+          transition: 0.35s;
+          font-weight: 600;
+          height: 55px;
+          -webkit-appearance: none;
+
+          &:hover {
+            border: 2px solid $primary;
+            border-radius: 4px;
+          }
+        }
+        ::placeholder {
+          color: $black;
+        }
+        .form-select {
+          width: 360px;
+          @media (max-width: $mediaXS) {
+            width: 195px;
+            -webkit-appearance: none;
+          }
+        }
+        input[type="submit"] {
+          position: relative;
+          background-color: $primary;
+          min-width: 360px;
+          min-height: 50px;
+          border-radius: 4px;
+          border: 1px solid transparent;
+          &:hover {
+            background-color: #e8bb07;
+            color: $white;
+          }
+          @media (max-width: $mediaXS) {
+            min-width: 195px;
+          }
+        }
+      }
+      div:first-child {
+        margin-top: 12px;
+        line-height: 40px;
+        font-weight: 700;
+      }
+    }
+  }
+  .contact-us {
+    @media (max-width: $mediaXS) {
+      margin: 75px 18px !important;
+      padding: 0 !important;
+    }
+    .title {
+      margin-bottom: 20px;
+      color: $primary;
+      font-size: 50px;
+      line-height: 60px;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      @media (max-width: $mediaXS) {
+        font-size: 42px;
+      }
+    }
+    .description {
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      color: $white;
+      @media (max-width: $mediaXS) {
+        font-size: 18px;
+      }
+    }
+    .link {
+      a {
+        color: $black;
+        background-color: #e8bb07;
+        height: 60px;
+        font-weight: 700;
+        overflow: hidden;
+        position: relative;
+        padding: 10px 40px;
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        top: 14px;
+        left: 0;
+        @media (max-width: $mediaXS) {
+          text-align: center;
+        }
+
+        &:hover {
+          color: $white;
+          background-color: $primary;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<header class="header" style="opacity: 1; transform: translate(0px, 0px);">
+    <div class="container">	
+    {% import _self as menus %}
+   <div class="header__logo">
+      <img src="/themes/custom/bluetheme/images/manara-logo1-120x120.webp" alt="Manara Logo">
+  </div>
+   <div class="header__nav" data-mobilenav>
+      <a href="/" class="header__logo header__logo--mobile">
+      <img src="/themes/custom/bluetheme/images/manara-logo1-120x120.webp" alt="Manara Logo">
+    </a>  
+
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('nav') }}>
+    {% else %}
+    {% endif %}
+    {% for item in items %}
+      {%
+
+        set classes = [
+          'header__nav__item',
+          item.is_expanded ? 'menu-item--expanded',
+          item.is_collapsed ? 'menu-item--collapsed',
+          item.in_active_trail ? 'menu-item--active-trail',
+        ]
+      %}
+						<li{{item.attributes.addClass(classes)}}>
+							{{ link(item.title, item.url) }}
+							{% if item.below %}
+								{{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+							{% endif %}
+						</li>
+					{% endfor %}
+                         </ul>
+        <button class="header__mobile-close" data-mobilenavbtn></button>
+         </div>
+        <div class="header__nav-additional">
+        <div class="nav">
+        </div>
+			{% endif %}
+		{% endmacro %}
+    </div>
+       <button class="header__mobile-button" data-mobilenavbtn>
+        <i></i>
+      </button>
+    </header>
+

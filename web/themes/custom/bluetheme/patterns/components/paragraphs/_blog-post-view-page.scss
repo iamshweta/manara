@@ -1,0 +1,20 @@
+.blog-view-page {
+  .views-row {
+    border-bottom: 1px solid gray;
+    padding: 20px;
+  }
+  .views-field-field-title {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: green;
+  }
+  .views-field-field-link {
+    display: none;
+  }
+  .views-field-field-image {
+    img {
+      width: 500px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.paragraph--type--image-block {
+  margin-bottom: 50px;
+  margin-top: 55px;
+
+  // @include media-breakpoint-up(md) {
+  //   max-width: 85% !important;
+  // }
+  .col-md-4{
+    @media (min-width: 768px) and (max-width: 911px){
+      max-width: fit-content;
+      flex:45%
+    }
+
+  }
+  .header-title{
+    text-align: center;
+    font-size: 55px;
+    font-weight: 700;
+    color: $secondary;  
+    margin: 89px 0;
+
+  }
+}

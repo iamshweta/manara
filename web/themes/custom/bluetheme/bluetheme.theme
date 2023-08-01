@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Theme file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+
+/**
+ * Theme suggestions for views.
+*/
+function bluetheme_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  $view = $variables['view'];
+  $id =  $view->id();
+  $suggestions[] = 'views_view__' . $id;
+}
+
+

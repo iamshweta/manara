@@ -1,0 +1,170 @@
+
+// COMPONENTS : ICONS
+
+$iconUrl: '../media/svg/';
+
+.icon- {
+  &analyses {
+    background: url($iconUrl + 'icon-analyses.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 117px;
+    transition: .5s;
+    width: 114px;
+
+     @media (min-width: 768px) and (max-width: 911px){
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  &arrow-right {
+    background: url($iconUrl + 'right-blue-arrow.png') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 15px;
+    width: 15px;
+  }
+
+  &box {
+    background: url($iconUrl + 'icon-box.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 75px;
+    width: 107px;
+  }
+
+  &close {
+    display: block;
+    height: 20px;
+    position: relative;
+    width: 20px;
+
+    &:before, &:after {
+      background: rgba($$black, .7);
+      content: '';
+      height: 20px;
+      position: absolute;
+      transform: rotate(45deg);
+      width: 1px;
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &cost-increase {
+    background: url($iconUrl + 'icon-cost-increase.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 32px;
+    transition: .5s;
+    width: 35px;
+
+     @media (min-width: 768px) and (max-width: 911px){
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  &email {
+    background: url($iconUrl + 'icon-email.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 13px;
+    width: 18px;
+  }
+
+  &k {
+    background: url($iconUrl + 'icon-k.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 18px;
+    width: 12px;
+  }
+
+  &level-risk {
+    background: url($iconUrl + 'icon-level-risk.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 114px;
+    transition: .5s;
+    width: 121px;
+
+     @media (min-width: 768px) and (max-width: 911px){
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  &performance-management {
+    background: url($iconUrl + 'icon-performance-management.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 39px;
+    transition: .5s;
+    width: 39px;
+
+     @media (min-width: 768px) and (max-width: 911px){
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  &potential-revenue {
+    background: url($iconUrl + 'icon-potential-revenue.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 121px;
+    transition: .5s;
+    width: 113px;
+
+     @media (min-width: 768px) and (max-width: 911px){
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  &revenue-reduction {
+    background: url($iconUrl + 'icon-revenue-reduction.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 33px;
+    transition: .5s;
+    width: 34px;
+
+     @media (min-width: 768px) and (max-width: 911px){
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  &supply-instability {
+    background: url($iconUrl + 'icon-supply-instability.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 35px;
+    transition: .5s;
+    width: 35px;
+
+     @media (min-width: 768px) and (max-width: 911px){
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  &talent-shortage {
+    background: url($iconUrl + 'icon-talent-shortage.svg') no-repeat center;
+    background-size: contain;
+    display: block;
+    height: 38px;
+    transition: .5s;
+    width: 39px;
+
+     @media (min-width: 768px) and (max-width: 911px){
+      height: 25px;
+      width: 25px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+type: theme
+base theme: false
+core_version_requirement: ^8.8.0 || ^9
+
+name: 'Blue Theme'
+description: 'Blue Theme'
+package: 'Custom'
+
+libraries:
+  - 'bluetheme/global-styling'
+
+regions:
+  branding: Branding
+  navigation: Main navigation
+  search: Search
+  featured: Featured
+  content: Content
+  right_sidebar: Right sidebar
+  footer_first: Footer First
+  footer_second: Footer Second
+  footer_third: Footer Third
+  footer_bottom: Footer Bottom
+  

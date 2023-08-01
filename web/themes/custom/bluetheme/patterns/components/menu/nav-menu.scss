@@ -1,0 +1,341 @@
+.header {
+  background: $white;
+  position: relative;
+  transform: none !important;
+  z-index: 2;
+
+  > .container {
+    align-items: center;
+    display: flex;
+
+    @media (max-width: $mediaXS) {
+      justify-content: space-between;
+    }
+  }
+
+  .header__logo {
+    min-width: 125px;
+    width: 125px;
+    transition: 0.3s;
+
+    img {
+      display: block;
+      height: auto;
+      width: 100px;
+      @media (max-width: $mediaXS) {
+        width: 50px;
+      }
+      @media (max-width: $mediaM) {
+        width: 50px;
+      }
+    }
+  }
+
+  .header__logo--mobile {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    @media (max-width: $mediaXS) {
+      display: block;
+    }
+  }
+
+  .header__mobile-close {
+    align-items: center;
+    background: $primary;
+    border: none;
+    cursor: pointer;
+    display: none;
+    justify-content: space-between;
+    height: 25px;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    text-decoration: none;
+    transition: 0.5s;
+    width: 25px;
+
+    &:before,
+    &:after {
+      background: $white;
+      content: "";
+      height: 2px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: center;
+      width: 100%;
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    @media (max-width: $mediaXS) {
+      display: inline-flex;
+    }
+  }
+
+  .header__nav {
+    margin-left: auto;
+    position: relative;
+
+    @media (max-width: $mediaXS) {
+      align-items: center;
+      background:#e8bb07 ;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: scale(0);
+      transform-origin: right top;
+      transition: 0.3s;
+      width: 100%;
+      z-index: 100;
+    }
+
+    &.opened {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .nav {
+      align-items: center;
+      display: flex;
+      gap: 25px;
+
+      @media (max-width: $mediaM) {
+        gap: 15px;
+      }
+      @media (max-width: $mediaXS) {
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 15%;
+      }
+    }
+
+    .header__nav__item {
+      color: rgb(75, 74, 74);
+      font: {
+        size: 25px;
+        weight: 300;
+      }
+      line-height: 16px;
+      position: relative;
+      text-decoration: none;
+      transition: 0.3s;
+      font-family: $secondary-font;
+
+      @media (max-width: $mediaM) {
+        font-size: 14px;
+        line-height: 14px;
+      }
+      @media (max-width: $mediaXS) {
+        font-size: 25px;
+        padding: 20px 0;
+      }
+
+      &::after {
+        background: $primary;
+        content: "";
+        height: 3px;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        transition: 0.4s;
+        width: 0;
+
+        @media (max-width: $mediaXS) {
+          display: none;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+        @media (max-width: $mediaXS) {
+          color: $white;
+        }
+
+        &:hover {
+          color: $primary;
+        }
+      }
+      + .header__nav__item {
+        transition: 0.4s;
+        cursor: pointer;
+        @media (max-width: $mediaM) {
+          margin-left: 20px;
+        }
+
+        @media (max-width: $mediaS) {
+          margin-left: 15px;
+        }
+
+        @media (max-width: $mediaXS) {
+          margin-left: 0;
+        }
+      }
+
+      &:hover {
+        color: $primary;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      .is-active {
+        color: $primary;
+        &::after {
+          background: $primary;
+          content: "";
+          height: 3px;
+          position: absolute;
+          top: calc(100% + 10px);
+          left: 0;
+          transition: 0.3s;
+          width: 0;
+        }
+
+        &::after {
+          width: 100%;
+          @media (max-width: $mediaS) {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .header__nav-additional {
+    margin-left: 60px;
+    transition: margin 0.3s;
+
+    @media (max-width: $mediaM) {
+      margin-left: 40px;
+    }
+
+    @media (max-width: $mediaS) {
+      margin-left: 30px;
+    }
+
+    nav {
+      align-items: center;
+      display: flex;
+    }
+
+    .header__nav__item {
+      svg {
+        display: block;
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+
+        path {
+          transition: 0.3s;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+
+      + .header__nav-additional__item {
+        margin-left: 60px;
+        position: relative;
+        transition: margin 0.3s;
+
+        @media (max-width: $mediaM) {
+          margin-left: 40px;
+        }
+
+        @media (max-width: $mediaS) {
+          margin-left: 30px;
+        }
+
+        &::before {
+          background: gray;
+          content: "";
+          height: 19px;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -30px;
+          transition: left 0.3s;
+          width: 1px;
+
+          @media (max-width: $mediaM) {
+            left: -20px;
+          }
+
+          @media (max-width: $mediaS) {
+            left: -15px;
+          }
+        }
+      }
+    }
+  }
+
+  .header__mobile-button {
+    align-items: center;
+    background: $white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    justify-content: space-between;
+    height: 25px;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    transition: 0.5s;
+    width: 25px;
+
+    i {
+      border-radius: 2px;
+      height: 2px;
+      background: $primary;
+      position: relative;
+      width: 100%;
+
+      &:before,
+      &:after {
+        background: $primary;
+        content: "";
+        height: 2px;
+        position: absolute;
+        top: -8px;
+        left: 0;
+        width: 100%;
+      }
+
+      &:after {
+        top: 8px;
+        width: 75%;
+      }
+    }
+
+    @media (max-width: $mediaXS) {
+      display: inline-flex;
+    }
+  }
+}

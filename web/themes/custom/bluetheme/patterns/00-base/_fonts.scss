@@ -1,0 +1,289 @@
+/* FONT PATH
+ * -------------------------- */
+
+ @font-face {
+  font-family: 'FontAwesome';
+  src: url('/themes/custom/bluetheme/patterns/fonts/fontawesome-webfont.eot?');
+  src:
+    url('../icons/fontawesome/fonts/fontawesome-webfont.woff') format('woff'),
+    url('../icons/fontawesome/fonts/fontawesome-webfont.ttf') format('truetype'),
+    url('../icons/fontawesome/fonts/fontawesome-webfont.svg?#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/themes/custom/bluetheme/patterns/fonts/pxiAyp8kv8JHgFVrJJLmE0tDMPKzSQ.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: local("Georgia");
+  font-weight: normal !important;
+}
+
+// 
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2;
+  font-family: "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+  color: #333;
+  background: $white;
+  -webkit-font-smoothing: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+img[data-src] {
+  padding-bottom: 62.5%;
+  background: #f0f0f0;
+  height: 1px;
+}
+
+
+input {
+  border: 0;
+}
+input::-ms-clear {
+  display: none;
+}
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"]::-webkit-file-upload-button,
+button {
+  border-radius: 0;
+}
+label {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.has-error label {
+  color: #d00;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+input[type="password"],
+input[type="tel"],
+textarea {
+  background-color: $white;
+  border: 1px solid #000;
+  min-height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+  padding: calc(0.4em + 2px) 1em 0.5em;
+}
+input[type="text"]:-webkit-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+input[type="text"]:-moz-placeholder,
+input[type="email"]:-webkit-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="email"]:-moz-placeholder,
+input[type="number"]:-webkit-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
+input[type="number"]:-moz-placeholder,
+input[type="url"]:-webkit-input-placeholder,
+input[type="url"]:-ms-input-placeholder,
+input[type="url"]:-moz-placeholder,
+input[type="password"]:-webkit-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+input[type="password"]:-moz-placeholder,
+input[type="tel"]:-webkit-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="tel"]:-moz-placeholder,
+textarea:-webkit-input-placeholder,
+textarea:-ms-input-placeholder,
+textarea:-moz-placeholder {
+  color: #b3b3b3;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  outline: 0;
+  border: 1px solid #1f40e6;
+  -webkit-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+}
+.has-error input[type="text"],
+.has-error input[type="email"],
+.has-error input[type="number"],
+.has-error input[type="url"],
+.has-error input[type="password"],
+.has-error input[type="tel"],
+.has-error textarea {
+  border-color: #d00;
+}
+textarea {
+  height: 248px;
+  resize: none;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  background-color: #1E40CA;
+  font-size: 15px;
+  padding: 0.3em 1em;
+  min-width: 144px;
+  min-height: 40px;
+  color: $white;
+  border: 2px solid #1E40CA;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+}
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: $white;
+  border-color: #1f40e6;
+  color: #1f40e6;
+  -webkit-box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+@media screen and (min-width: 48em) {
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    width: auto;
+  }
+}
+input[type="reset"],
+input[disabled] {
+  background-color: #757575;
+}
+input[type="reset"]:hover {
+  color: $white;
+  background-color: #1f40e6;
+}
+input[disabled] {
+  color: #d0d0d0;
+}
+input[disabled]:hover {
+  color: #d0d0d0;
+  background-color: #757575;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transform: none;
+  transform: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+input[type="checkbox"]:hover + label,
+input[type="radio"]:hover + label {
+  color: #1f40e6;
+}
+input[type="checkbox"]:hover + label:after,
+input[type="radio"]:hover + label:after {
+  background: #1f40e6;
+  content: " ";
+  display: block;
+  height: 2px;
+  width: calc(100% - 24px);
+  position: absolute;
+}
+input[type="checkbox"]:focus + label:before,
+input[type="radio"]:focus + label:before {
+  color: #1f40e6;
+}
+input[type="checkbox"],
+input[type="checkbox"] + label,
+input[type="radio"],
+input[type="radio"] + label {
+  font-weight: 400;
+  margin: 4px 4px 14px 0;
+  cursor: pointer;
+  color: #000;
+  display: inline-block;
+  width: auto;
+}
+input[type="checkbox"]:lang(ja),
+input[type="checkbox"] + label:lang(ja),
+input[type="radio"]:lang(ja),
+input[type="radio"] + label:lang(ja) {
+  color: #000;
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  font-size: 1rem;
+  text-transform: none;
+  position: relative;
+  padding-left: 24px;
+  color: #000;
+}
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
+  font-size: 1.125rem;
+  float: left;
+  margin-top: -2px;
+  margin-left: -24px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  font-weight: 500;
+}
+input[type="checkbox"]:checked + label:before,
+input[type="radio"]:checked + label:before {
+  color: #1f40e6;
+}
+
+a{
+  :hover{
+    text-decoration: none;
+  }
+ 
+}

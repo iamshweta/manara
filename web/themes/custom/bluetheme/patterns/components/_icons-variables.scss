@@ -1,0 +1,33 @@
+@mixin if-styles {
+  font-family: "icon-font";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+@mixin if-icon($filename, $insert: before, $include: true) {
+  &::#{$insert} {
+    @if $include {
+      @include if-styles;
+    }
+    content: $filename;
+  }
+}
+
+$if-arrow-right: "\E001";
+$if-chevron-left: "\E002";
+$if-chevron-right: "\E003";
+$if-email: "\E004";
+$if-envelope: "\E005";
+$if-facebook: "\E006";
+$if-instagram: "\E007";
+$if-lens: "\E008";
+$if-linkedin: "\E009";
+$if-search: "\E00A";
+$if-twitter: "\E00B";
+$if-youtube: "\E00C";

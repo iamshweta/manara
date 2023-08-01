@@ -1,0 +1,28 @@
+.paragraph--type--team {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 44px auto;
+  font-family: $secondary-font;
+  .col-md-4 {
+    @media (min-width: 768px) and (max-width: 911px) {
+      max-width: 100%;
+    }
+  }
+  .row {
+    @media (min-width: 768px) and (max-width: 911px) {
+      flex-direction: column;
+    }
+  }
+
+  .header-title {
+    text-align: center;
+    font-size: 55px;
+    font-weight: 700;
+    color: $secondary;
+    margin-bottom: 45px;
+    @media (min-width: 768px) and (max-width: 911px) {
+      margin-bottom: 22px;
+    }
+  }
+}
