@@ -18,7 +18,7 @@
         text-align: center;
         display: flex;
         justify-content: center;
-        @media (max-width: $mediaXS) {
+        @media (max-width: $mediaS) {
             flex-direction: column;
         }
         .subtitle {
@@ -43,7 +43,7 @@
         .social_links {
             margin-top: 68px;
             margin-left: 15%;
-            @media (max-width: $mediaXS) {
+            @media (max-width: $mediaS) {
                 margin: 0;
             }
             a {
