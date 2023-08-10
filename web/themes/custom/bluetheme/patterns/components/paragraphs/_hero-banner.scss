@@ -1,63 +1,119 @@
-.paragraph--type--hero-banner {
-    background: url("/themes/custom/bluetheme/images/composting-banner.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    .row {
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .banner {
-        margin: 50px 15px;
-        .description {
-            background: #33475891;
-            padding: 19px;
-            h1 {
-                font-size: 45px;
-                font-weight: 700;
-                color: #aff32f;
-                @media (max-width: $mediaXS) {
-                    font-size: 35px;
-                }
-            }
-            p {
-                font-size: 25px;
-                max-width: 600px;
-                padding: 35px 0;
-                color: $white;
-                @media (max-width: $mediaXS) {
-                    font-size: 20px;
-                }
-            }
-        }
-        .button {
-            a {
-                color: $black;
-                background-color: #e8bb07;
-                height: 60px;
-                font-weight: 700;
-                overflow: hidden;
-                position: relative;
-                padding: 10px 40px;
-                align-items: center;
-                display: inline-flex;
-                justify-content: center;
-                cursor: pointer;
-                text-transform: uppercase;
-                border-top-left-radius: 0px;
-                border-top-right-radius: 30px;
-                border-bottom-left-radius: 30px;
-                top: 14px;
-                left: 0;
-                @media (max-width: $mediaXS) {
-                    text-align: center;
-                }
-                &:hover {
-                    color: $white;
-                    background-color: $primary;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
+.paragraph--type--hero-section-slider {
+    position: relative;
+
+	.hero-section {
+			position: relative;
+			img {
+					width: -webkit-fill-available;
+					height: 700px;
+					opacity: 0.9;
+			}
+			&-title {
+				position: absolute;
+				top: 200px;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 80px;
+				font-weight: bold;
+					color: white;
+				z-index: 1;
+			}
+
+			&-description {
+			position: absolute;
+			top: 60%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+					color: white;
+			font-size: 25px;
+			font-weight: bold;
+			z-index: 1;
+		}
+
+			&-link {
+			position: absolute;
+			bottom: 100px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 30px;
+			cursor: pointer;
+					z-index: 99;
+
+			a {
+					background-color: #e8bb07;
+					height: 60px;
+					font-weight: 700;
+					overflow: hidden;
+					position: relative;
+					padding: 10px 40px;
+					color: black;
+					align-items: center;
+					display: inline-flex;
+					justify-content: center;
+					cursor: pointer;
+					text-transform: uppercase;
+					border-top-left-radius: 0px;
+					border-top-right-radius: 30px;
+					border-bottom-left-radius: 30px;
+					text-decoration: none;
+
+				&:hover {
+									color: white;
+									background-color: green;
+									text-decoration: none;
+				}
+			}
+		}
+	}
+
+	button {
+		&[data-controls="prev"],
+		&[data-controls="next"] {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: $black;
+			color: $black;
+			font-size: 0;
+			border: none;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 30px;
+			font-size: 0;
+			z-index: 99;
+			cursor: pointer;
+			height: 40px;
+			width: 40px;
+			opacity: 0.3;
+
+			&::after {
+				position: absolute;
+				color: $white;
+				bottom: 5px;
+				left: 15px;
+				font-size: 20px;
+			}
+
+			&:focus {
+				box-shadow: none;
+				opacity: 1;
+			}
+		}
+
+		&[data-controls="prev"] {
+			left: 10px;
+
+			&::after {
+				content: "<";
+			}
+		}
+
+		&[data-controls="next"] {
+			right: 10px;
+
+			&::after {
+				content: ">";
+			}
+		}
+	}
 }
