@@ -5,6 +5,7 @@
 			position: relative;
 			img {
 				width: -webkit-fill-available;
+				width: -moz-available;
 				height: 700px;
 				opacity: 0.9;
 
@@ -26,25 +27,28 @@
 			
 
 			@media (min-width: 768px){
-			top: 40%;
-    		left: 35%;
-			transform: translate(-50%, -50%);
-			color: white;
-			font-size: 25px;
-			font-weight: bold;
-			z-index: 1;
-			padding: 30px;
+				top: 40%;
+				left: 35%;
+				transform: translate(-50%, -50%);
+				color: white;
+				font-size: 25px;
+				font-weight: bold;
+				z-index: 1;
+				padding: 30px;
 			  }
 		}
 
 			&-link {
 			position: absolute;
-			bottom: 10%;
+			bottom: 5%;
 			left: 44%;
 			transform: translate(-50%, -50%);
 			border-radius: 30px;
 			cursor: pointer;
 			z-index: 99;
+			@media (min-width: 375px){
+				bottom: 10%;
+			  }
 
 			@media (min-width: 768px){
 				left: 12%;

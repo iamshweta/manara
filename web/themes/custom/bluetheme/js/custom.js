@@ -16,6 +16,23 @@
         });
     });
 
+            Drupal.behaviors.navigation = {
+          attach: function (context, settings) {
+              if(document.querySelectorAll('  [data-mobilenavbtn]').length > 0){
+                const mobileNavBtn = document.querySelectorAll('[data-mobilenavbtn]');
+                const mobileNav = document.querySelector('[data-mobilenav]');
+
+                mobileNavBtn.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    mobileNav.classList.toggle('opened');
+                 })
+              })    
+            }
+
+          }
+      }
+
     'use strict';
     var slider_flag = 0;
 
