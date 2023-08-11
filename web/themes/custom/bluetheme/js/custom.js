@@ -43,6 +43,7 @@
                 const slider_ac = tns({
                     container: '.my-slider',
                     items: 1,
+                    autoplay: true,
                     slideBy: 'page',
                     controls: true,
                     nav: false,

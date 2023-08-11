@@ -1,6 +1,10 @@
 .paragraph--type--hero-section-slider {
     position: relative;
 
+		button[data-action="stop"] {
+			display: none;
+		}
+
 	.hero-section {
 			position: relative;
 			img {
@@ -15,7 +19,6 @@
 			}
 
 			&-description {
-
 				position: absolute;
 				z-index: 99;
 				padding: 30px;
@@ -46,6 +49,7 @@
 			border-radius: 30px;
 			cursor: pointer;
 			z-index: 99;
+
 			@media (min-width: 375px){
 				bottom: 10%;
 			  }
@@ -100,7 +104,7 @@
 			text-align: center;
 			line-height: 30px;
 			font-size: 0;
-			z-index: 99;
+			z-index: 1;
 			cursor: pointer;
 			height: 40px;
 			width: 40px;
