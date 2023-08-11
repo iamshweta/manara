@@ -18,8 +18,10 @@
   img {
     width: 100%;
     height: 300px;
+    object-fit: cover;
     @media (max-width: $mediaXS) {
       max-height: none;
+      // object-fit: cover;
     }
     &:hover {
       opacity: 0;
