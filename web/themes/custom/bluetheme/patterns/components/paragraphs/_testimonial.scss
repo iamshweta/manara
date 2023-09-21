@@ -1,80 +1,134 @@
-.paragraph--type--author-testimonial {
-  .container {
-    display: grid;
-    max-width: 1290px;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    .views-row {
-      background-color: $white;
-      padding: 45px;
-      margin: 15px;
-      position: relative;
+.testimonies {
+
+  .testimony {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    flex-basis: 45%;
+    width: 500px;
+    opacity: 0.2;
+
+    &.tns-slide-active {
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: -15px;
+      background: url(/themes/custom/bluetheme/images/quote.png) no-repeat var(--white);
+      background-size: 60%;
+      width: 85px;
+      height: 85px;
+      transform: rotate(180deg);
+      background-position: 34px 15px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 17px;
+      bottom: 0px;
+      background: url(/themes/custom/bluetheme/images/quote.png) no-repeat var(--white);
+      background-size: 60%;
+      width: 85px;
+      height: 85px;
+      background-position: 34px 19px;
+    }
+
+    .paragraph--type--testimony {
+      padding: 50px;
+      margin: 20px;
+      border: 4px solid #80ba14;
+      border-radius: 45px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.paragraph--type--testimonies {
+  margin: 100px auto;
+  position: relative;
+
+  .tns-inner {
+    width: 40%;
+    margin: 0 auto !important;
+
+    @media (max-width: $mediaL) {
+      width: 100%;
+  }
+  }
+  .tns-outer {
+    position: relative;
+  }
+
+  .tns-controls {
+    button {
+      position: absolute;
+      top: 45%;
+      background-color: #000;
+      color: #000;
+      font-size: 0;
+      border: none;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      font-size: 0;
       z-index: 1;
-      border: 2px solid $white;
-      transition: all 0.3s linear;
-      box-shadow: 0px 10px 60px 0px rgba(75, 154, 250, 0.1);
-      &:hover {
-        border: 2px solid #e8bb07;
-        transition: all 0.3s linear;
-      }
+      cursor: pointer;
+      height: 60px;
+      width: 60px;
+      opacity: 0.3;
 
-      .views-field-field-author-image {
-        margin-top: 80px;
-        img {
-          width: 100%;
-          height: 200px;
-          object-fit: cover;
-        }
-      }
-      .views-field-field-author-name {
+      &::after {
         position: absolute;
-        top: 7%;
+        color: #fff;
+        bottom: 14px;
+        left: 20px;
+        font-size: 30px;
+      }
+    }
+
+    [data-controls~="prev"] {
+      left: 200px;
+
+      @media (max-width: $mediaS) {
         left: 30px;
-        font-size: 18px;
-        font-weight: 600;
-        font-family: "Poppins", sans-serif;
-        color: $black;
-        @media (max-width: $mediaXS) {
-          right: 18%;
-          top: 2%;
-          line-height: 18px;
-        }
-      }
-      .views-field-field-author-title {
-        position: absolute;
-        top: 15%;
-        left: 28px;
-        font-size: 16px;
-        font-weight: 500;
-        color: #e8bb07;
-      }
-      .views-field-field-star-image {
-        position: absolute;
-        top: 22%;
-        left: 18px;
-        img{
-          height: 30px;
-          width: 100px;
-        }
-        @media (max-width: $mediaXS) {
-          right: 28%;
-        }
-      }
+    }
 
-      .views-field-field-b {
-        position: absolute;
-        top: 50px;
+      &::after {
+        content: "<";
+      }
+    }
+
+    [data-controls~="next"] {
+      right: 200px;
+
+      @media (max-width: $mediaS) {
         right: 30px;
-        img {
-          opacity: 0.02;
-        }
+    }
+
+      &::after {
+        content: ">";
       }
     }
   }
-  .header-title {
-    text-align: center;
-    font-size: 55px;
-    font-weight: 700;
-    color: $secondary;
-    padding: 65px 0;
-  }
+}
+
+.testimony-title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #bcd633;
+  padding: 0 70px 70px;
+  width: fit-content;
+  margin: auto;
+
+  @media (max-width: $mediaS) {
+    font-size: 30px;
+}
 }

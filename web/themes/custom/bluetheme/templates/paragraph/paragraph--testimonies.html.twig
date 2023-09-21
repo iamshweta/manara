@@ -49,16 +49,8 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-        <div class="product-information">
-                <div>{{ content.field_product_information}}</div> 
-    </div>
-    <div class="service-desc">
-         <div class ="service-title">{{content.field_title.0}}</div>
-              {{ content.field_image }}
-          <div class ="service-description"> {{content.field_application.0}}</div>
-    </div>
-    <div class = "ctalink">{{ content.field_c.0}}</div>
-    {# </div>  #}
+            <div class="testimony-title">{{ content.field_title }}</div>
+            {{ content.field_testimony }}
     {% endblock %}
   </div>
 {% endblock paragraph %}
