@@ -1,47 +1,46 @@
 .paragraph--type--hero-section-slider {
-    position: relative;
+	position: relative;
 
-		button[data-action="stop"] {
-			display: none;
-		}
+	button[data-action="stop"] {
+		display: none;
+	}
 
 	.hero-section {
-			position: relative;
-			img {
-				width: -webkit-fill-available;
-				width: -moz-available;
-				height: 700px;
-				opacity: 0.9;
+		position: relative;
 
-				@media (max-width: 768px){
-					object-fit: cover;
-				  }
+		img {
+			width: -webkit-fill-available;
+			width: -moz-available;
+			height: 700px;
+			opacity: 0.9;
+
+			@media(max-width:$mediaL) {
+				height: 500px;
+				object-fit: cover;
 			}
-
-			&-description {
-				position: absolute;
-				z-index: 99;
-				padding: 30px;
-				top: 30px;
-				color: white;
-				margin: 50px;
-				font-weight: 700;
-				background: #33475891;
-			
-
-			@media (min-width: 768px){
-				top: 40%;
-				left: 35%;
-				transform: translate(-50%, -50%);
-				color: white;
-				font-size: 25px;
-				font-weight: bold;
-				z-index: 1;
-				padding: 30px;
-			  }
 		}
 
-			&-link {
+		&-description {
+			position: absolute;
+			z-index: 99;
+			padding: 30px;
+			top: 30px;
+			color: white;
+			margin: 50px;
+			font-weight: 700;
+			background: #33475891;
+
+			@media(max-width:$mediaXS) {
+				top: 0;
+			}
+
+			@media(max-width:$mediaXXS) {
+				font-size: 15px;
+				padding: 12px;
+			}
+		}
+
+		&-link {
 			position: absolute;
 			bottom: 5%;
 			left: 44%;
@@ -50,14 +49,18 @@
 			cursor: pointer;
 			z-index: 99;
 
-			@media (min-width: 375px){
-				bottom: 10%;
-			  }
+			@media(max-width:$mediaM) {
+				bottom: 0;
+				// left: 30%;
+			}
 
-			@media (min-width: 768px){
-				left: 12%;
-				bottom: 15%;
-			  }
+			@media(max-width:$mediaXS) {
+				left: 22%;
+			}
+
+			@media(max-width:$mediaXXS) {
+				left: 30%;
+			}
 
 			a {
 				background-color: #e8bb07;
@@ -77,9 +80,9 @@
 				border-bottom-left-radius: 30px;
 				text-decoration: none;
 
-				@media (min-width: 768px){
+				@media (min-width: 768px) {
 					padding: 10px 40px;
-				  }
+				}
 
 				&:hover {
 					color: white;
@@ -91,6 +94,7 @@
 	}
 
 	button {
+
 		&[data-controls="prev"],
 		&[data-controls="next"] {
 			position: absolute;

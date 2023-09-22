@@ -8,6 +8,7 @@
   height: 500px;
   position: relative;
   background-color: #80ba14;
+  transition: 1s;
 
   @media (max-width: $mediaXS) {
     max-width: none;
@@ -25,7 +26,6 @@
 
   &:hover {
     background-color: white;
-    // height: 500px;
     .service-desc {
       opacity: 1;
       height: auto;
