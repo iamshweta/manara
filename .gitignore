@@ -63,8 +63,8 @@
 /web/profiles/contrib/
 /web/libraries/
 /web/private/scripts/quicksilver
-
-
+web/themes/custom/bluetheme/node_modules
+.gitignore
 # Generally you should only ignore the root vendor directory. It's important
 # that core/assets/vendor and any other vendor directories within contrib or
 # custom module, theme, etc., are not ignored unless you purposely do so.
